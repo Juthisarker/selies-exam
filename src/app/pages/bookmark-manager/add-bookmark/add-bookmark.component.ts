@@ -38,29 +38,10 @@ export class AddBookmarkComponent implements OnInit {
     // });
    this.bookmarks =  JSON.parse(localStorage.getItem('bookmark_list' || '[]'));
   }
- 
-// get categories() : FormArray {
-//   return this.bookMarkForm.get("categories") as FormArray
-// }
-  // get category() {
-  //   return this.form.controls["category"] as FormArray;
-  // }
-
-//   newCategory(): FormGroup {
-//     return this.fb.group({
-//       new_category: '',
-//     })
-//  }
-  // addCategory() {
-  //   this.categories.push(this.newCategory());
-  // }
   addBookMark(){
     const object = this.bookMarkForm.value;
     object.id = Math.floor( Math.random() * (700 - 10) + 10);
-    console.log("valeueue",object);
-    console.log("before  array",this.bookmarks);
      if(this.bookmarks==null){
-       console.log("hellloo");
        this.bookmarks = [];
        this.bookmarks.push(object);
        localStorage.setItem('bookmark_list', JSON.stringify(this.bookmarks));
