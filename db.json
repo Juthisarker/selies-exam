@@ -1,0 +1,45 @@
+{
+  "productList": [
+    {
+      "productName": "ssdmmd",
+      "category": "Fruits",
+      "freshness": "Brand new",
+      "price": 122,
+      "comment": "eeer",
+      "date": "2022-09-28T18:00:00.000Z",
+      "id": 3
+    },
+    {
+      "productName": "jellllo",
+      "category": [
+        "Vegetables"
+      ],
+      "freshness": "Brand new",
+      "price": 67,
+      "comment": "etert",
+      "date": "2022-10-10T18:00:00.000Z",
+      "id": 4
+    },
+    {
+      "productName": "juthi",
+      "category": [
+        "Vegetables"
+      ],
+      "freshness": "Brand new",
+      "price": 78,
+      "comment": "hello",
+      "date": "2022-10-06T18:00:00.000Z",
+      "id": 5
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

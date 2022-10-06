@@ -2,8 +2,16 @@
 // `ng build` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
+// export const environment = {
+//   production: false,
+//   apiUrl: 'https://api.themoviedb.org',
+//   imageUrl: 'https://image.tmdb.org/t/p/w200',
+// };
 export const environment = {
-  production: false
+  production: true,
+ apiUrl : 'http://localhost:3000/'
+  // apiUrl: 'https://api.themoviedb.org',
+  // imageUrl: 'https://image.tmdb.org/t/p/w200',
 };
 
 /*

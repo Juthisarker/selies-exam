@@ -1,0 +1,53 @@
+
+<h1 mat-dialog-title>Add Bookmark</h1>
+<div mat-dialog-content>
+
+
+    <form  [formGroup]="bookMarkForm">
+        <!-- <div>
+            <label for="companyName">Title</label>
+            <input id="companyName" type="text" formControlName="title" />
+        </div>  -->
+        <mat-form-field appearance="outline">
+            <mat-label>title</mat-label>
+            <input formControlName ="title" matInput placeholder="title">
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>url</mat-label>
+            <input formControlName ="url" matInput placeholder="url">
+          </mat-form-field>
+
+          <mat-form-field
+    
+          appearance="fill"
+          *ngIf="categoryList.length >= 1"
+        >
+          <mat-label>category</mat-label>
+          <mat-select
+            formControlName="category"
+            (selectionChange)="selectCategory()"
+          >
+            <mat-option
+              *ngFor="let des of categoryList"
+              [value]="des"
+            >
+              {{ des }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <ng-container formArrayName="admins">
+            <ng-container *ngFor="let adminForm of categories.controls; let index = index">
+                <div [formGroupName]="index">
+                    <input id="name" type="text" formControlName="new_category" />             
+                </div>
+            </ng-container>
+        </ng-container>
+        <button type="button" (click)="addNewCategory()">
+            <mat-icon class="add-course-btn">add</mat-icon>
+        </button>
+    </form>
+</div>
+<div mat-dialog-action [align] ="'end'">
+    <button mat-raised-button color = "warn" mat-dialog-close>Close</button>
+    <button style="margin-left: 8px;" mat-raised-button color = "primary" (click)="addBookMark()">Save</button>
+    </div>
