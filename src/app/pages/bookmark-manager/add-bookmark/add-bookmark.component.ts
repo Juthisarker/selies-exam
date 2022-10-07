@@ -41,8 +41,8 @@ export class AddBookmarkComponent implements OnInit {
   addBookMark(){
     const object = this.bookMarkForm.value;
     object.id = Math.floor( Math.random() * (700 - 10) + 10);
-     if(this.bookmarks==null){
-       this.bookmarks = [];
+     if(Array.isArray(this.bookmarks)){
+      //  this.bookmarks = [];
        this.bookmarks.push(object);
        localStorage.setItem('bookmark_list', JSON.stringify(this.bookmarks));
        this.commonService.showSuccessMsg(`Bookmark added successfully!!`);
